@@ -10,19 +10,18 @@ Use your Repl.IT account and use the Instructions provided by your Instructors t
 ## Exercise 1 - Formatting
 
 Modify the program to produce the output given below (don't print the first two lines and the blank line).
-You have to use the following commands in the <iomanip> header file
+You have to use the following commands in the <iomanip> header file.
 
-  ```c++
-#include <iostream>
+#include <iomanip>
 using namespace std;
 int main() {
    float marks[] = {78.4, 90.6, 45.9, 72.2, 54.4};
    char names[][20] = {"Ajith", "Wimal", "Kanthi", "Suranji", "Kushmitha"};
-   cout << "No" << "Name" << "Marks" << endl;
+   cout <<setw(5)<< "No" <<setw(15)<< "Name" << setw(10)<<"Marks" << endl;
    for (int r = 0; r < 5; r++) {
-       cout <<  r+1 
-            <<  names[r]
-            << marks[r] << endl;
+       cout << setw(5)<< r+1 
+            <<  setw(15)<< names[r]
+            << setw(10)<<marks[r] << endl;
    }
 }
 ```
